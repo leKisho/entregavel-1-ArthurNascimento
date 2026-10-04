@@ -20,8 +20,9 @@ def verificaMissao(bateria, duracao_missao, consumo_por_minuto):
     if consumo_total > 100:
         print("\n\nO consumo total da missão é maior que 100%% da bateria. Impossivel realizar."
             "\nOtimize a missão ou reduza o consumo."
+            "\nCarga necessária: +%.2f%%"
             "\nBateria disponível: %.2f%%"
-            "\nConsumo total: %.2f%%\n"%(bateria, consumo_total))
+            "\nConsumo total: %.2f%%\n"%(-bateria_final, bateria, consumo_total))
     
     elif bateria_final < 0: 
         print("\n\nA bateria não é suficiente para a duração da missão e o consumo informado.\
